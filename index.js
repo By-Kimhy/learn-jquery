@@ -63,15 +63,47 @@ $(document).ready(function () {
 
 //CSS
 $(document).ready(function () {
-    $('#CSS').click(function () {
-        $('#demo').css({"background-color":"yellow","font-size":"50px"});
-    });
+    // $('#CSS').click(function () {
+    //     $('#demo').css({"background-color":"yellow","font-size":"50px"});
+    // });
     // all class
     // $('.like').click(function(){
     //     $('.like').css({"color":"red","font-size":"50px"});
     // })
     // for what you click with this
     $('.like').click(function(){
-        $(this).css({"color":"red","font-size":"50px"});
+        var ethis=$(this);
+        var opt=ethis.data("opt");
+        if(opt==0){
+            ethis.css({"color":"red"});
+            ethis.data({"opt":"1"});
+        }else{
+            ethis.css({"color":"black"});
+            ethis.data({"opt":"0"});
+        }
+        
     })
 })
+
+// img
+// $(document).ready(function () {
+//     // $('.img').click(function(){
+//     //     $(this).attr({"src":"img/2.png"})
+//     // });
+//     $('.img').mouseover(function(){
+//         var ethis =$(this);
+//         var img1 = ethis.data("img1");
+//         var img2 = ethis.data("img2");
+//         ethis.attr({"src":img2});
+//     });
+//     $('.img').mouseout(function(){
+//         var ethis=$(this);
+//         var img1 = ethis.data("img1");
+//         var img2 = ethis.data("img2");
+//         ethis.attr({"src":img1});
+//     })
+
+//     $('.img').click(function(){
+//         alert($(this).data("img1")); 
+//     })
+// })
