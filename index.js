@@ -1,6 +1,6 @@
-document.getElementById("btn1").addEventListener("click", function () {
-    document.getElementById("demo").innerHTML = "JavaScript";
-})
+// document.getElementById("btn1").addEventListener("click", function () {
+//     document.getElementById("demo").innerHTML = "JavaScript";
+// })
 $(document).ready(function () {
     $('#btn2').click(function () {
         $('#demo').html('<h1>JQuery</h1>');
@@ -45,18 +45,33 @@ $(document).ready(function () {
 
     qty.keyup(function () {
         // getTotal();
-        total.text(getTotal2(qty.val(),price.val()));
+        total.text(getTotal2(qty.val(), price.val()));
     });
     price.keyup(function () {
         // getTotal();
-        total.text(getTotal2(qty.val(),price.val()));
+        total.text(getTotal2(qty.val(), price.val()));
     });
 
-    function getTotal(){
+    function getTotal() {
         total.text(qty.val() * price.val());
     }
 
-    function getTotal2(x,y){
-        return x*y;
+    function getTotal2(x, y) {
+        return x * y;
     }
 });
+
+//CSS
+$(document).ready(function () {
+    $('#CSS').click(function () {
+        $('#demo').css({"background-color":"yellow","font-size":"50px"});
+    });
+    // all class
+    // $('.like').click(function(){
+    //     $('.like').css({"color":"red","font-size":"50px"});
+    // })
+    // for what you click with this
+    $('.like').click(function(){
+        $(this).css({"color":"red","font-size":"50px"});
+    })
+})
